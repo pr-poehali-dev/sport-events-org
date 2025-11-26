@@ -160,6 +160,10 @@ export default function Index() {
 
       <section id="main" className="relative overflow-hidden py-20 md:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url('https://cdn.poehali.dev/projects/a010a460-2fd6-4656-a65a-7dcbd7c24102/files/3eeb6c8c-33a1-43f2-802b-22b9a26ccd46.jpg')` }}
+        />
         <div className="container relative z-10">
           <div className="mx-auto max-w-3xl text-center animate-fade-in">
             <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
@@ -185,8 +189,12 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-16 bg-muted/30">
-        <div className="container">
+      <section className="relative py-16 bg-muted/30 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-5"
+          style={{ backgroundImage: `url('https://cdn.poehali.dev/projects/a010a460-2fd6-4656-a65a-7dcbd7c24102/files/1d974674-7e6f-4a6e-87c2-bb4306c67254.jpg')` }}
+        />
+        <div className="container relative z-10">
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="hover-lift">
               <CardHeader>
@@ -319,8 +327,12 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="testimonials" className="py-20">
-        <div className="container">
+      <section id="testimonials" className="relative py-20 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-5"
+          style={{ backgroundImage: `url('https://cdn.poehali.dev/projects/a010a460-2fd6-4656-a65a-7dcbd7c24102/files/44a84014-edb5-4bbf-9cb5-f8027422d370.jpg')` }}
+        />
+        <div className="container relative z-10">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Отзывы спортсменов</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
