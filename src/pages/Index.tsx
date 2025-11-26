@@ -159,10 +159,10 @@ export default function Index() {
       </header>
 
       <section id="main" className="relative overflow-hidden py-20 md:py-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20" />
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-10"
-          style={{ backgroundImage: `url('https://cdn.poehali.dev/projects/a010a460-2fd6-4656-a65a-7dcbd7c24102/files/3eeb6c8c-33a1-43f2-802b-22b9a26ccd46.jpg')` }}
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{ backgroundImage: `url('https://cdn.poehali.dev/projects/a010a460-2fd6-4656-a65a-7dcbd7c24102/files/263d7898-eb28-4fb3-ad72-1639e5f0e967.jpg')` }}
         />
         <div className="container relative z-10">
           <div className="mx-auto max-w-3xl text-center animate-fade-in">
@@ -172,9 +172,15 @@ export default function Index() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Достигай новых высот в спорте
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground mb-4">
               Организуем спортивные сборы и мероприятия по всем видам спорта. Профессиональные тренеры, современные базы, индивидуальный подход.
             </p>
+            <div className="flex items-center justify-center gap-6 mb-8 text-sm font-medium text-primary">
+              <div className="flex items-center gap-2">
+                <Icon name="Target" className="h-5 w-5" />
+                <span>Цель • Результат • Победа</span>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" onClick={() => scrollToSection('events')} className="gap-2">
                 <Icon name="Calendar" className="h-5 w-5" />
@@ -191,8 +197,8 @@ export default function Index() {
 
       <section className="relative py-16 bg-muted/30 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-5"
-          style={{ backgroundImage: `url('https://cdn.poehali.dev/projects/a010a460-2fd6-4656-a65a-7dcbd7c24102/files/1d974674-7e6f-4a6e-87c2-bb4306c67254.jpg')` }}
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url('https://cdn.poehali.dev/projects/a010a460-2fd6-4656-a65a-7dcbd7c24102/files/7815045f-94fc-4412-b634-7dba26d90898.jpg')` }}
         />
         <div className="container relative z-10">
           <div className="grid md:grid-cols-3 gap-8">
@@ -329,8 +335,8 @@ export default function Index() {
 
       <section id="testimonials" className="relative py-20 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-5"
-          style={{ backgroundImage: `url('https://cdn.poehali.dev/projects/a010a460-2fd6-4656-a65a-7dcbd7c24102/files/44a84014-edb5-4bbf-9cb5-f8027422d370.jpg')` }}
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url('https://cdn.poehali.dev/projects/a010a460-2fd6-4656-a65a-7dcbd7c24102/files/0ac3df01-5feb-4573-aa49-d11509fedeab.jpg')` }}
         />
         <div className="container relative z-10">
           <div className="text-center mb-12 animate-fade-in">
