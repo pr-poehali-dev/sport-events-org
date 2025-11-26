@@ -141,11 +141,11 @@ export default function Index() {
             <button onClick={() => scrollToSection('main')} className="text-sm font-medium hover:text-primary transition-colors">
               Главная
             </button>
-            <button onClick={() => scrollToSection('events')} className="text-sm font-medium hover:text-primary transition-colors">
-              Календарь
-            </button>
             <button onClick={() => scrollToSection('bases')} className="text-sm font-medium hover:text-primary transition-colors">
               Базы
+            </button>
+            <button onClick={() => scrollToSection('events')} className="text-sm font-medium hover:text-primary transition-colors">
+              Календарь
             </button>
             <button onClick={() => scrollToSection('testimonials')} className="text-sm font-medium hover:text-primary transition-colors">
               Отзывы
@@ -182,9 +182,9 @@ export default function Index() {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" onClick={() => scrollToSection('events')} className="gap-2">
-                <Icon name="Calendar" className="h-5 w-5" />
-                Смотреть календарь
+              <Button size="lg" onClick={() => scrollToSection('bases')} className="gap-2">
+                <Icon name="MapPin" className="h-5 w-5" />
+                Смотреть базы
               </Button>
               <Button size="lg" variant="outline" onClick={() => scrollToSection('contacts')} className="gap-2">
                 <Icon name="Phone" className="h-5 w-5" />
@@ -239,6 +239,44 @@ export default function Index() {
         </div>
       </section>
 
+      <section id="bases" className="py-20 bg-muted/30">
+        <div className="container">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Наши базы</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Современные спортивные комплексы с лучшей инфраструктурой
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {bases.map((base, index) => (
+              <Card key={index} className="hover-lift overflow-hidden">
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
+                  <Icon name="Building2" className="h-16 w-16 text-primary/40" />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-xl">{base.name}</CardTitle>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <Icon name="MapPin" className="h-4 w-4" />
+                    <span>{base.location}</span>
+                  </div>
+                  <CardDescription className="mt-2">{base.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2">
+                    {base.features.map((feature, i) => (
+                      <div key={i} className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="h-4 w-4 text-primary" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="events" className="py-20">
         <div className="container">
           <div className="text-center mb-12 animate-fade-in">
@@ -287,44 +325,6 @@ export default function Index() {
                       <Icon name="CheckCircle" className="h-4 w-4" />
                       Записаться
                     </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="bases" className="py-20 bg-muted/30">
-        <div className="container">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Наши базы</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Современные спортивные комплексы с лучшей инфраструктурой
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {bases.map((base, index) => (
-              <Card key={index} className="hover-lift overflow-hidden">
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                  <Icon name="Building2" className="h-16 w-16 text-primary/40" />
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-xl">{base.name}</CardTitle>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <Icon name="MapPin" className="h-4 w-4" />
-                    <span>{base.location}</span>
-                  </div>
-                  <CardDescription className="mt-2">{base.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-2">
-                    {base.features.map((feature, i) => (
-                      <div key={i} className="flex items-center gap-2 text-sm">
-                        <Icon name="Check" className="h-4 w-4 text-primary" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
                   </div>
                 </CardContent>
               </Card>
